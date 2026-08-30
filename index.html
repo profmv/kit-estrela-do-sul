@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Desafio completo de Power BI com dados sintéticos de bilhetagem rodoviária da empresa fictícia Estrela do Sul.">
+  <meta name="theme-color" content="#0f2748">
+  <meta property="og:title" content="Estrela do Sul — Desafio Power BI">
+  <meta property="og:description" content="Da bilhetagem à decisão: analise receita, demanda, clientes e frota.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://profmv.github.io/kit-estrela-do-sul/">
+  <meta property="og:image" content="https://profmv.github.io/kit-estrela-do-sul/assets/estrela-do-sul-hero.png">
+  <link rel="canonical" href="https://profmv.github.io/kit-estrela-do-sul/">
+  <title>Estrela do Sul — Desafio Power BI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="project">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="reading-progress" aria-hidden="true"><span id="readingBar"></span></div>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Estrela do Sul — início"><img src="assets/logo-estreladosul.png" alt=""><span><strong>Estrela do Sul</strong><small>Projeto de dados</small></span></a>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mainNav">Menu</button>
+    <nav id="mainNav" aria-label="Navegação principal"><a href="#missao">Missão</a><a href="#dados">Dados</a><a href="#jornada">Jornada</a><a href="#dashboard">Dashboard</a><a href="#entrega">Entrega</a><a href="glossario.html">Glossário</a></nav>
+    <button class="theme-button" id="themeButton" type="button" aria-label="Alternar tema">◐</button>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <img class="hero-image" src="assets/estrela-do-sul-hero.png" alt="Ônibus rodoviário moderno em um terminal ao anoitecer"><div class="hero-shade"></div>
+      <div class="wrap hero-content">
+        <p class="eyebrow">PROJETO PRÁTICO · POWER BI</p><h1>Transforme bilhetes em <em>rotas de decisão.</em></h1>
+        <p class="hero-copy">Analise dois anos de vendas, passageiros, viagens e frota para descobrir onde a Estrela do Sul pode crescer com eficiência.</p>
+        <div class="hero-actions"><a class="button primary" href="#missao">Começar o desafio</a><a class="button ghost" href="downloads/base-v2-desafio.zip" download>Baixar dados V2 <span>↓</span></a></div>
+        <dl class="hero-stats" aria-label="Resumo da base"><div><dt>24 mil</dt><dd>bilhetes</dd></div><div><dt>800</dt><dd>viagens</dd></div><div><dt>103</dt><dd>trechos</dd></div><div><dt>1</dt><dd>dashboard final</dd></div></dl>
+      </div>
+    </section>
+
+    <section class="section intro" id="missao">
+      <div class="wrap split-heading"><div><p class="eyebrow dark">01 · O CASO</p><h2>A diretoria vê movimento.<br>Você precisa mostrar direção.</h2></div><p class="section-lead">A Estrela do Sul conecta as cinco regiões do Brasil. Você integra o time de Analytics responsável por transformar bilhetagem, demanda e frota em decisões executivas.</p></div>
+      <div class="wrap brief-grid">
+        <article class="brief-card featured ticket-card"><span class="card-label">PERGUNTA CENTRAL</span><h3>Como aumentar receita e ocupação sem perder acessibilidade, conforto e eficiência da frota?</h3><p>Seu dashboard deve terminar em decisões, não apenas em gráficos.</p></article>
+        <article class="brief-card ticket-card"><span class="icon-chip" aria-hidden="true">↗</span><h3>Receita</h3><p>Tarifa, desconto, ticket médio, classe e trecho.</p></article>
+        <article class="brief-card ticket-card"><span class="icon-chip" aria-hidden="true">◎</span><h3>Demanda</h3><p>Ocupação, sazonalidade, antecedência e motivo.</p></article>
+        <article class="brief-card ticket-card"><span class="icon-chip" aria-hidden="true">✦</span><h3>Frota</h3><p>Capacidade, idade, Wi-Fi, WC, USB e classe.</p></article>
+      </div>
+    </section>
+
+    <section class="section data-section" id="dados">
+      <div class="wrap">
+        <p class="eyebrow">02 · O QUE VOCÊ RECEBE</p><div class="section-title-row"><h2>O mesmo negócio em três níveis de dificuldade.</h2><p>O professor escolhe a versão conforme a turma. Os alunos baixam dados prontos e começam diretamente no Power BI.</p></div>
+        <div class="version-grid">
+          <article class="version-card"><span class="version-tag">V1 · INICIANTE</span><h3>Uma tabela com erros</h3><p>Bilhetagem desnormalizada para praticar limpeza e reconhecer grãos repetidos.</p><ul><li>24.082 linhas brutas</li><li>Moeda, datas e textos</li><li>40 bilhetes duplicados</li></ul></article>
+          <article class="version-card recommended ticket-card"><span class="version-tag">V2 · RECOMENDADA</span><h3>Seis tabelas com erros</h3><p>Compradores, transações, passageiros, bilhetes, viagens e veículos.</p><ul><li>PKs e FKs para validar</li><li>Grãos distintos</li><li>Sujeira e duplicatas intencionais</li></ul></article>
+          <article class="version-card"><span class="version-tag">V3 · PROFESSOR</span><h3>Base de validação</h3><p>Referência limpa para conferir relações, contagens e indicadores.</p><ul><li>24.042 bilhetes</li><li>7.535 transações</li><li>Integridade validada</li></ul></article>
+        </div>
+        <div class="download-panel">
+          <div><p class="eyebrow">ARQUIVOS PRONTOS</p><h3>Baixe, extraia e importe.</h3><p>A versão V2 é o desafio completo. A V1 reduz a complexidade para turmas iniciantes.</p></div>
+          <div class="download-links"><a class="download-main" href="downloads/base-v1-iniciante.zip" download><b>01</b><strong>Base V1 · Iniciante</strong><span>1 tabela · ZIP ↓</span></a><a class="download-main recommended-download" href="downloads/base-v2-desafio.zip" download><b>02</b><strong>Base V2 · Desafio</strong><span>6 tabelas · ZIP ↓</span></a><a href="downloads/DICAS_POWERBI.md" download><strong>Guia de apoio</strong><span>Limpeza + modelo + DAX ↓</span></a><a href="assets/tema-estreladosul.json" download><strong>Tema visual</strong><span>Paleta da marca ↓</span></a></div>
+        </div>
+        <div class="schema" aria-label="Mapa dos relacionamentos sugeridos">
+          <div class="schema-copy"><p class="eyebrow">MODELO EM 30 SEGUNDOS</p><h3>Compra não é bilhete. Ônibus não é viagem.</h3><p>Uma transação pode emitir vários bilhetes. Um veículo realiza várias viagens. Misturar esses grãos distorce receita, capacidade e recorrência.</p><p class="schema-tip"><strong>Regra:</strong> o lado “1” precisa ser único antes de criar a relação.</p></div>
+          <div class="model-board">
+            <div class="model-row main-model-row"><article class="model-node dim-node"><span>DIMENSÃO</span><strong>Compradores</strong><small>PK · Comprador_CPF</small></article><div class="model-link"><b>1</b><i>→</i><b>N</b></div><article class="model-node fact-node"><span>FATO · compra</span><strong>Transações</strong><small>PK · Transacao_ID</small></article><div class="model-link"><b>1</b><i>→</i><b>N</b></div><article class="model-node fact-node"><span>FATO · assento vendido</span><strong>Bilhetes</strong><small>PK · Bilhete_ID</small></article></div>
+            <div class="model-row branch-model-row"><article class="model-node dim-node"><span>DIMENSÃO</span><strong>Passageiros</strong><small>PK · Passageiro_CPF</small></article><div class="model-link"><b>1</b><i>→</i><b>N</b><small>Bilhetes</small></div><article class="model-node dim-node"><span>DIMENSÃO</span><strong>Veículos</strong><small>PK · Onibus_Prefixo</small></article><div class="model-link"><b>1</b><i>→</i><b>N</b></div><article class="model-node fact-node"><span>FATO · saída</span><strong>Viagens</strong><small>PK · Viagem_ID</small></article><div class="model-link"><b>1</b><i>→</i><b>N</b><small>Bilhetes</small></div></div>
+            <p class="model-caption">Bilhetes recebe filtros de transações, passageiros e viagens; viagens recebe filtros de veículos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey" id="jornada"><div class="wrap"><p class="eyebrow dark">03 · SUA JORNADA</p><h2>Do arquivo bruto ao mapa de decisões.</h2>
+      <div class="compact-steps"><article><span>01</span><h3>Reconhecer</h3><p>Grãos + problemas</p></article><article><span>02</span><h3>Limpar</h3><p>Power Query</p></article><article><span>03</span><h3>Modelar</h3><p>Relações 1:N</p></article><article><span>04</span><h3>Calcular</h3><p>KPIs em DAX</p></article><article><span>05</span><h3>Defender</h3><p>4 páginas + 3 ações</p></article></div>
+      <div class="cleaning-lab"><div><p class="eyebrow">LABORATÓRIO DE LIMPEZA</p><h3>Transforme com uma regra clara.</h3><p>Registre problema, evidência, decisão e resultado.</p></div><div class="before-after"><div><span>ANTES</span><code>" SITE "</code><code>"30.06.2026"</code><code>"R$ 1.234,56"</code><code>VGM-00000001␠</code></div><div class="arrow" aria-hidden="true">→</div><div><span>DEPOIS</span><code>"Site"</code><code>30/06/2026</code><code>1234,56</code><code>VGM-00000001</code></div></div></div>
+    </div></section>
+
+    <section class="section dax-section" id="medidas"><div class="wrap"><div class="section-title-row"><div><p class="eyebrow">04 · MEDIDAS ESSENCIAIS</p><h2>Conte o evento certo. Uma única vez.</h2></div><p>Receita está no grão do bilhete. Antecedência está no grão da transação. Capacidade deve ser considerada uma vez por viagem.</p></div>
+      <div class="dax-grid">
+        <article class="dax-card"><div><span>Resultado comercial</span><button class="copy-button" data-copy="Receita Passagens =&#10;SUM(bilhetes[Valor_Total_Passagem])&#10;&#10;Ticket Médio =&#10;DIVIDE([Receita Passagens], [Bilhetes Vendidos])">Copiar DAX</button></div><pre><code><b>Receita Passagens</b> =
+SUM(bilhetes[Valor_Total_Passagem])
+
+<b>Ticket Médio</b> = DIVIDE(
+  [Receita Passagens],
+  [Bilhetes Vendidos]
+)</code></pre></article>
+        <article class="dax-card"><div><span>Demanda</span><button class="copy-button" data-copy="Capacidade Ofertada =&#10;SUM(viagens[Capacidade_Total_Veiculo])&#10;&#10;% Ocupação =&#10;DIVIDE([Bilhetes Vendidos], [Capacidade Ofertada])">Copiar DAX</button></div><pre><code><b>Capacidade Ofertada</b> =
+SUM(viagens[Capacidade_Total_Veiculo])
+
+<b>% Ocupação</b> = DIVIDE(
+  [Bilhetes Vendidos],
+  [Capacidade Ofertada]
+)</code></pre></article>
+        <article class="dax-card"><div><span>Política tarifária</span><button class="copy-button" data-copy="% Desconto =&#10;DIVIDE(&#10;  SUM(bilhetes[Valor_Desconto]),&#10;  SUM(bilhetes[Valor_Tarifa])&#10;)">Copiar DAX</button></div><pre><code><b>% Desconto</b> = DIVIDE(
+  SUM(bilhetes[Valor_Desconto]),
+  SUM(bilhetes[Valor_Tarifa])
+)</code></pre></article>
+      </div><p class="note"><strong>Atenção:</strong> somar capacidade na tabela desnormalizada multiplica os lugares disponíveis pelo número de bilhetes. Use a tabela de viagens ou uma medida que conte cada viagem uma vez.</p>
+    </div></section>
+
+    <section class="section dashboard-section" id="dashboard"><div class="wrap"><p class="eyebrow dark">05 · O DASHBOARD</p><h2>Quatro páginas. Uma história executiva.</h2>
+      <div class="page-grid"><article class="page-card ticket-card"><span>01</span><h3>Visão Executiva</h3><p>Receita, bilhetes, transações, ocupação, ticket médio e descontos.</p><small>Pergunta: onde estamos e o que exige atenção?</small></article><article class="page-card ticket-card"><span>02</span><h3>Rotas &amp; Demanda</h3><p>Trechos, calendário, horário, classe, capacidade e sazonalidade.</p><small>Pergunta: onde existe demanda ou capacidade ociosa?</small></article><article class="page-card ticket-card"><span>03</span><h3>Vendas &amp; Clientes</h3><p>Canais, recorrência, motivo, antecedência e categorias de passagem.</p><small>Pergunta: quem compra, como compra e quando decide?</small></article><article class="page-card ticket-card"><span>04</span><h3>Frota &amp; Inclusão</h3><p>Veículos, idade, conforto, Wi-Fi, bagagem e necessidades especiais.</p><small>Pergunta: como a frota sustenta eficiência e experiência?</small></article></div>
+      <div class="visual-rules"><h3>Regras de design que valem ponto</h3><div><p><strong>01</strong> Um título deve dizer o que a página permite decidir.</p><p><strong>02</strong> KPI sem comparação é apenas um número.</p><p><strong>03</strong> Filtros precisam ser visíveis e fáceis de limpar.</p><p><strong>04</strong> CPF, RG, telefone e e-mail não devem aparecer sem necessidade.</p></div></div>
+    </div></section>
+
+    <section class="section insight-section"><div class="wrap"><div class="section-title-row"><div><p class="eyebrow">06 · PERGUNTAS PARA INVESTIGAR</p><h2>Não aceite a primeira explicação.</h2></div><p>Use filtros, comparação temporal e segmentação para separar coincidência de evidência.</p></div>
+      <div class="question-grid"><article><span>01</span><p>Trechos com maior receita também têm melhor ocupação?</p></article><article><span>02</span><p>Site e App trazem clientes mais recorrentes ou apenas mais volume?</p></article><article><span>03</span><p>Classes premium compensam a menor quantidade de assentos?</p></article><article><span>04</span><p>Wi-Fi, WC e USB se relacionam com escolha, preço ou demanda?</p></article><article><span>05</span><p>Quais horários e meses concentram capacidade ociosa?</p></article><article><span>06</span><p>Como benefícios e gratuidades variam entre trechos e perfis?</p></article></div>
+    </div></section>
+
+    <section class="section delivery" id="entrega"><div class="wrap"><p class="eyebrow dark">07 · ENTREGA FINAL</p><h2>O que precisa estar pronto.</h2>
+      <div class="delivery-layout"><div class="checklist" id="checklist"><label><input type="checkbox" data-task="diagnosis"><span><strong>Diagnóstico</strong> com grãos, problemas e regras de limpeza.</span></label><label><input type="checkbox" data-task="query"><span><strong>Consultas</strong> organizadas, tipadas e com etapas nomeadas.</span></label><label><input type="checkbox" data-task="model"><span><strong>Modelo</strong> com calendário, relações corretas e sem ambiguidade.</span></label><label><input type="checkbox" data-task="dax"><span><strong>Medidas DAX</strong> organizadas em uma tabela exclusiva.</span></label><label><input type="checkbox" data-task="pages"><span><strong>Quatro páginas</strong> com perguntas executivas explícitas.</span></label><label><input type="checkbox" data-task="insights"><span><strong>Três insights</strong> sustentados por medidas e comparações.</span></label><label><input type="checkbox" data-task="actions"><span><strong>Três recomendações</strong> com ação e impacto esperado.</span></label><label><input type="checkbox" data-task="summary"><span><strong>Resumo final</strong> com limitações e próximos passos.</span></label></div>
+        <aside class="score-card"><p>SEU PROGRESSO</p><strong id="progressValue">0%</strong><div class="progress-track"><span id="taskProgress"></span></div><small id="progressMessage">Comece pelo diagnóstico da base.</small><hr><h3>Rubrica · 100 pontos</h3><dl><div><dt>ETL e qualidade</dt><dd>25</dd></div><div><dt>Modelagem</dt><dd>20</dd></div><div><dt>DAX e validação</dt><dd>25</dd></div><div><dt>Design e usabilidade</dt><dd>15</dd></div><div><dt>Insights e defesa</dt><dd>15</dd></div></dl></aside></div>
+      <div class="final-callout"><span aria-hidden="true">✦</span><div><p>CRITÉRIO DE SUCESSO</p><h3>Uma pessoa da diretoria deve entender onde a rede ganha, onde perde capacidade e qual decisão tomar em até cinco minutos.</h3></div></div>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap footer-grid"><div class="brand footer-brand"><img src="assets/logo-estreladosul.png" alt=""><span><strong>Estrela do Sul</strong><small>Projeto de dados</small></span></div><p>Projeto educacional fictício para prática de Power BI.<br>Dados, pessoas, documentos e viagens são inteiramente sintéticos.</p><div><a href="https://sitefic-estreladosul.onrender.com/" target="_blank" rel="noopener">Conhecer a empresa fictícia ↗</a><a href="#inicio">Voltar ao topo ↑</a></div></div></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite">Copiado para a área de transferência.</div><script src="script.js" defer></script>
+</body>
+</html>

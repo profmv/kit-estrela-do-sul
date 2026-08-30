@@ -1,0 +1,7 @@
+{
+  "name": "Estrela do Sul",
+  "dataColors": ["#0F2748", "#D4A017", "#7FC4E8", "#163A66", "#2A9D8F", "#F2D896", "#5C6B7A"],
+  "background": "#F5FAFD",
+  "foreground": "#0F2748",
+  "tableAccent": "#D4A017"
+}
