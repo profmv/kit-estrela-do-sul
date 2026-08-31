@@ -2,9 +2,15 @@
 
 Use este material como orientação, não como solução pronta. Registre as decisões tomadas durante o trabalho.
 
-## 1. Entenda a base antes de transformar
+## 1. Comece pela base desnormalizada
 
-Na V2, cada arquivo representa um assunto e possui um grão diferente:
+A **V1 é a base obrigatória da atividade**. Cada linha representa um bilhete e
+repete dados de comprador, transação, passageiro, viagem e veículo. Identificar
+esses grupos, criar consultas de referência e separar as entidades faz parte da
+entrega. A V2 deve ser usada somente como checkpoint opcional, depois que você
+construir sua proposta.
+
+Ao normalizar a V1, o modelo-alvo terá assuntos com grãos diferentes:
 
 | Tabela | Uma linha representa | Chave esperada |
 |---|---|---|
